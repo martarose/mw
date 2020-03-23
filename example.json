@@ -1,0 +1,50 @@
+{
+  "variables": {
+    "iso": "http://archive.kernel.org/centos-vault/7.2.1511/isos/x86_64/CentOS-7-x86_64-Minimal-1511.iso",
+    "checksum": "88c0437f0a14c6e2c94426df9d43cd67"
+  },
+  "builders": [
+    {
+      "type": "virtualbox-iso",
+      "iso_url": "{{ user `iso` }}",
+      "iso_checksum": "{{ user `checksum` }}",
+      "iso_checksum_type": "md5",
+      "vm_name": "MyCentOS7",
+      "guest_os_type": "RedHat_64",
+      "ssh_username": "root",
+      "ssh_password": "packer",
+      "ssh_port": 22,
+      "ssh_wait_timeout": "600s",
+      "vboxmanage": [
+        ["modifyvm", "{{.Name}}", "--memory", "2048"],
+        ["modifyvm", "{{.Name}}", "--cpus", "2"],
+        ["modifyvm", "{{.Name}}", "--audio", "none"]
+      ],
+      "disk_size": "10240",
+      "http_directory": "http",
+      "boot_command": [
+        "<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ks.cfg<enter><wait>"
+      ],
+      "shutdown_command": "/sbin/halt -p"
+    }
+  ],
+  "provisioners": [
+   {
+     "type": "shell",
+      "inline": "sudo yum -y install epel-release"
+    },
+    {
+      "type": "shell",
+      "inline": "sudo yum -y install ansible"
+    },
+    {
+      "type": "file",
+      "source": "/Users/marta/Projects/PackerExample/ansible.yml",
+      "destination": "/home/centos/ansible.yml"
+    },
+    {
+      "type": "ansible-local",
+      "playbook_file": "ansible.yml"
+   }
+ ]
+}

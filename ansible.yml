@@ -1,0 +1,39 @@
+---
+- hosts: localhost
+  become: true
+ 
+  tasks:
+    - name: install nginx
+      yum:
+        name: nginx
+        state: present
+ 
+    - name: start nginx
+      service:
+        name: nginx
+        state: started
+        enabled: yes
+ 
+    - name: Copy nginx.conf
+      copy:
+      src: /Users/marta/Projects/PackerExample/nginx.conf
+      dest: /etc/nginx/nginx.conf
+      owner: root
+      group: root
+      mode: '0644'
+
+    - name: Copy example.com.conf 
+      copy:
+      src: /Users/marta/Projects/PackerExample/example.com.conf
+      dest: /etc/nginx/conf.d/example.com.conf
+      owner: root
+      group: root
+      mode: '0644'
+
+    - name: Copy sth.pl.conf
+      copy:
+      src: /Users/marta/Projects/PackerExample/sth.pl.conf
+      dest: /etc/nginx/conf.d/sth.pl.conf
+      owner: root
+      group: root
+      mode: '0644'

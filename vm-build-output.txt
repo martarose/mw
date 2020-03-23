@@ -1,0 +1,286 @@
+
+kontuzja-mac:PackerExample marta$ packer build example.json
+virtualbox-iso: output will be in this color.
+
+==> virtualbox-iso: Retrieving Guest additions
+==> virtualbox-iso: Trying /Applications/VirtualBox.app/Contents/MacOS/VBoxGuestAdditions.iso
+==> virtualbox-iso: Trying /Applications/VirtualBox.app/Contents/MacOS/VBoxGuestAdditions.iso
+==> virtualbox-iso: /Applications/VirtualBox.app/Contents/MacOS/VBoxGuestAdditions.iso => /Applications/VirtualBox.app/Contents/MacOS/VBoxGuestAdditions.iso
+==> virtualbox-iso: Retrieving ISO
+==> virtualbox-iso: Trying http://archive.kernel.org/centos-vault/7.2.1511/isos/x86_64/CentOS-7-x86_64-Minimal-1511.iso
+==> virtualbox-iso: Trying http://archive.kernel.org/centos-vault/7.2.1511/isos/x86_64/CentOS-7-x86_64-Minimal-1511.iso?checksum=md5%3A88c0437f0a14c6e2c94426df9d43cd67
+==> virtualbox-iso: http://archive.kernel.org/centos-vault/7.2.1511/isos/x86_64/CentOS-7-x86_64-Minimal-1511.iso?checksum=md5%3A88c0437f0a14c6e2c94426df9d43cd67 => /Users/marta/Projects/PackerExample/packer_cache/8767ff781a993a9d85df816d514cb0756b5db835.iso
+==> virtualbox-iso: Starting HTTP server on port 8701
+==> virtualbox-iso: Creating virtual machine...
+==> virtualbox-iso: Creating hard drive...
+==> virtualbox-iso: Creating forwarded port mapping for communicator (SSH, WinRM, etc) (host port 3473)
+==> virtualbox-iso: Executing custom VBoxManage commands...
+    virtualbox-iso: Executing: modifyvm MyCentOS7 --memory 2048
+    virtualbox-iso: Executing: modifyvm MyCentOS7 --cpus 2
+    virtualbox-iso: Executing: modifyvm MyCentOS7 --audio none
+==> virtualbox-iso: Starting the virtual machine...
+==> virtualbox-iso: Waiting 10s for boot...
+==> virtualbox-iso: Typing the boot command...
+==> virtualbox-iso: Using ssh communicator to connect: 127.0.0.1
+==> virtualbox-iso: Waiting for SSH to become available...
+==> virtualbox-iso: Connected to SSH!
+==> virtualbox-iso: Uploading VirtualBox version info (6.1.4)
+==> virtualbox-iso: Uploading VirtualBox guest additions ISO...
+==> virtualbox-iso: Provisioning with shell script: /var/folders/0d/j_dh8rf92_j55k2xs_5t1ccm0000gn/T/packer-shell105982154
+    virtualbox-iso: Loaded plugins: fastestmirror
+    virtualbox-iso: Loading mirror speeds from cached hostfile
+    virtualbox-iso:  * base: ftp.pbone.net
+    virtualbox-iso:  * extras: ftp.pbone.net
+    virtualbox-iso:  * updates: ftp.pbone.net
+    virtualbox-iso: Resolving Dependencies
+    virtualbox-iso: --> Running transaction check
+    virtualbox-iso: ---> Package epel-release.noarch 0:7-11 will be installed
+    virtualbox-iso: --> Finished Dependency Resolution
+    virtualbox-iso:
+    virtualbox-iso: Dependencies Resolved
+    virtualbox-iso:
+    virtualbox-iso: ================================================================================
+    virtualbox-iso:  Package                Arch             Version         Repository        Size
+    virtualbox-iso: ================================================================================
+    virtualbox-iso: Installing:
+    virtualbox-iso:  epel-release           noarch           7-11            extras            15 k
+    virtualbox-iso:
+    virtualbox-iso: Transaction Summary
+    virtualbox-iso: ================================================================================
+    virtualbox-iso: Install  1 Package
+    virtualbox-iso:
+    virtualbox-iso: Total download size: 15 k
+    virtualbox-iso: Installed size: 24 k
+    virtualbox-iso: Downloading packages:
+    virtualbox-iso: Running transaction check
+    virtualbox-iso: Running transaction test
+    virtualbox-iso: Transaction test succeeded
+    virtualbox-iso: Running transaction
+    virtualbox-iso:   Installing : epel-release-7-11.noarch                                     1/1
+    virtualbox-iso:   Verifying  : epel-release-7-11.noarch                                     1/1
+    virtualbox-iso:
+    virtualbox-iso: Installed:
+    virtualbox-iso:   epel-release.noarch 0:7-11
+    virtualbox-iso:
+    virtualbox-iso: Complete!
+==> virtualbox-iso: Provisioning with shell script: /var/folders/0d/j_dh8rf92_j55k2xs_5t1ccm0000gn/T/packer-shell839173414
+    virtualbox-iso: Loaded plugins: fastestmirror
+    virtualbox-iso: Loading mirror speeds from cached hostfile
+    virtualbox-iso:  * base: ftp.pbone.net
+    virtualbox-iso:  * epel: ftp.wcss.pl
+    virtualbox-iso:  * extras: ftp.pbone.net
+    virtualbox-iso:  * updates: ftp.pbone.net
+==> virtualbox-iso: http://mirror.speedpartner.de/epel/7/x86_64/repodata/d533a25c5bbe7274bbd8290f53f40b0e35314d64d6bf0db042492c6dd663ad91-primary.sqlite.bz2: [Errno 14] HTTP Error 404 - Not Found
+==> virtualbox-iso: Trying other mirror.
+==> virtualbox-iso: To address this issue please refer to the below wiki article
+==> virtualbox-iso:
+==> virtualbox-iso: https://wiki.centos.org/yum-errors
+==> virtualbox-iso:
+==> virtualbox-iso: If above article doesn't help to resolve this issue please use https://bugs.centos.org/.
+==> virtualbox-iso:
+==> virtualbox-iso: http://mirror.nextlayer.at/epel/7/x86_64/repodata/d533a25c5bbe7274bbd8290f53f40b0e35314d64d6bf0db042492c6dd663ad91-primary.sqlite.bz2: [Errno 14] HTTP Error 404 - Not Found
+==> virtualbox-iso: Trying other mirror.
+    virtualbox-iso: Resolving Dependencies
+    virtualbox-iso: --> Running transaction check
+    virtualbox-iso: ---> Package ansible.noarch 0:2.9.6-1.el7 will be installed
+    virtualbox-iso: --> Processing Dependency: PyYAML for package: ansible-2.9.6-1.el7.noarch
+    virtualbox-iso: --> Processing Dependency: python-httplib2 for package: ansible-2.9.6-1.el7.noarch
+    virtualbox-iso: --> Processing Dependency: python-jinja2 for package: ansible-2.9.6-1.el7.noarch
+    virtualbox-iso: --> Processing Dependency: python-paramiko for package: ansible-2.9.6-1.el7.noarch
+    virtualbox-iso: --> Processing Dependency: python-setuptools for package: ansible-2.9.6-1.el7.noarch
+    virtualbox-iso: --> Processing Dependency: python-six for package: ansible-2.9.6-1.el7.noarch
+    virtualbox-iso: --> Processing Dependency: python2-cryptography for package: ansible-2.9.6-1.el7.noarch
+    virtualbox-iso: --> Processing Dependency: python2-jmespath for package: ansible-2.9.6-1.el7.noarch
+    virtualbox-iso: --> Processing Dependency: sshpass for package: ansible-2.9.6-1.el7.noarch
+    virtualbox-iso: --> Running transaction check
+    virtualbox-iso: ---> Package PyYAML.x86_64 0:3.10-11.el7 will be installed
+    virtualbox-iso: --> Processing Dependency: libyaml-0.so.2()(64bit) for package: PyYAML-3.10-11.el7.x86_64
+    virtualbox-iso: ---> Package python-httplib2.noarch 0:0.9.2-1.el7 will be installed
+    virtualbox-iso: ---> Package python-jinja2.noarch 0:2.7.2-4.el7 will be installed
+    virtualbox-iso: --> Processing Dependency: python-babel >= 0.8 for package: python-jinja2-2.7.2-4.el7.noarch
+    virtualbox-iso: --> Processing Dependency: python-markupsafe for package: python-jinja2-2.7.2-4.el7.noarch
+    virtualbox-iso: ---> Package python-paramiko.noarch 0:2.1.1-9.el7 will be installed
+    virtualbox-iso: --> Processing Dependency: python2-pyasn1 for package: python-paramiko-2.1.1-9.el7.noarch
+    virtualbox-iso: ---> Package python-setuptools.noarch 0:0.9.8-7.el7 will be installed
+    virtualbox-iso: --> Processing Dependency: python-backports-ssl_match_hostname for package: python-setuptools-0.9.8-7.el7.noarch
+    virtualbox-iso: ---> Package python-six.noarch 0:1.9.0-2.el7 will be installed
+    virtualbox-iso: ---> Package python2-cryptography.x86_64 0:1.7.2-2.el7 will be installed
+    virtualbox-iso: --> Processing Dependency: python-idna >= 2.0 for package: python2-cryptography-1.7.2-2.el7.x86_64
+    virtualbox-iso: --> Processing Dependency: python-cffi >= 1.4.1 for package: python2-cryptography-1.7.2-2.el7.x86_64
+    virtualbox-iso: --> Processing Dependency: python-ipaddress for package: python2-cryptography-1.7.2-2.el7.x86_64
+    virtualbox-iso: --> Processing Dependency: python-enum34 for package: python2-cryptography-1.7.2-2.el7.x86_64
+    virtualbox-iso: ---> Package python2-jmespath.noarch 0:0.9.0-3.el7 will be installed
+    virtualbox-iso: ---> Package sshpass.x86_64 0:1.06-2.el7 will be installed
+    virtualbox-iso: --> Running transaction check
+    virtualbox-iso: ---> Package libyaml.x86_64 0:0.1.4-11.el7_0 will be installed
+    virtualbox-iso: ---> Package python-babel.noarch 0:0.9.6-8.el7 will be installed
+    virtualbox-iso: ---> Package python-backports-ssl_match_hostname.noarch 0:3.5.0.1-1.el7 will be installed
+    virtualbox-iso: --> Processing Dependency: python-backports for package: python-backports-ssl_match_hostname-3.5.0.1-1.el7.noarch
+    virtualbox-iso: ---> Package python-cffi.x86_64 0:1.6.0-5.el7 will be installed
+    virtualbox-iso: --> Processing Dependency: python-pycparser for package: python-cffi-1.6.0-5.el7.x86_64
+    virtualbox-iso: ---> Package python-enum34.noarch 0:1.0.4-1.el7 will be installed
+    virtualbox-iso: ---> Package python-idna.noarch 0:2.4-1.el7 will be installed
+    virtualbox-iso: ---> Package python-ipaddress.noarch 0:1.0.16-2.el7 will be installed
+    virtualbox-iso: ---> Package python-markupsafe.x86_64 0:0.11-10.el7 will be installed
+    virtualbox-iso: ---> Package python2-pyasn1.noarch 0:0.1.9-7.el7 will be installed
+    virtualbox-iso: --> Running transaction check
+    virtualbox-iso: ---> Package python-backports.x86_64 0:1.0-8.el7 will be installed
+    virtualbox-iso: ---> Package python-pycparser.noarch 0:2.14-1.el7 will be installed
+    virtualbox-iso: --> Processing Dependency: python-ply for package: python-pycparser-2.14-1.el7.noarch
+    virtualbox-iso: --> Running transaction check
+    virtualbox-iso: ---> Package python-ply.noarch 0:3.4-11.el7 will be installed
+    virtualbox-iso: --> Finished Dependency Resolution
+    virtualbox-iso:
+    virtualbox-iso: Dependencies Resolved
+    virtualbox-iso:
+    virtualbox-iso: ================================================================================
+    virtualbox-iso:  Package                               Arch     Version          Repository
+    virtualbox-iso:                                                                            Size
+    virtualbox-iso: ================================================================================
+    virtualbox-iso: Installing:
+    virtualbox-iso:  ansible                               noarch   2.9.6-1.el7      epel      17 M
+    virtualbox-iso: Installing for dependencies:
+    virtualbox-iso:  PyYAML                                x86_64   3.10-11.el7      base     153 k
+    virtualbox-iso:  libyaml                               x86_64   0.1.4-11.el7_0   base      55 k
+    virtualbox-iso:  python-babel                          noarch   0.9.6-8.el7      base     1.4 M
+    virtualbox-iso:  python-backports                      x86_64   1.0-8.el7        base     5.8 k
+    virtualbox-iso:  python-backports-ssl_match_hostname   noarch   3.5.0.1-1.el7    base      13 k
+    virtualbox-iso:  python-cffi                           x86_64   1.6.0-5.el7      base     218 k
+    virtualbox-iso:  python-enum34                         noarch   1.0.4-1.el7      base      52 k
+    virtualbox-iso:  python-httplib2                       noarch   0.9.2-1.el7      extras   115 k
+    virtualbox-iso:  python-idna                           noarch   2.4-1.el7        base      94 k
+    virtualbox-iso:  python-ipaddress                      noarch   1.0.16-2.el7     base      34 k
+    virtualbox-iso:  python-jinja2                         noarch   2.7.2-4.el7      base     519 k
+    virtualbox-iso:  python-markupsafe                     x86_64   0.11-10.el7      base      25 k
+    virtualbox-iso:  python-paramiko                       noarch   2.1.1-9.el7      base     269 k
+    virtualbox-iso:  python-ply                            noarch   3.4-11.el7       base     123 k
+    virtualbox-iso:  python-pycparser                      noarch   2.14-1.el7       base     104 k
+    virtualbox-iso:  python-setuptools                     noarch   0.9.8-7.el7      base     397 k
+    virtualbox-iso:  python-six                            noarch   1.9.0-2.el7      base      29 k
+    virtualbox-iso:  python2-cryptography                  x86_64   1.7.2-2.el7      base     502 k
+    virtualbox-iso:  python2-jmespath                      noarch   0.9.0-3.el7      extras    39 k
+    virtualbox-iso:  python2-pyasn1                        noarch   0.1.9-7.el7      base     100 k
+    virtualbox-iso:  sshpass                               x86_64   1.06-2.el7       extras    21 k
+    virtualbox-iso:
+    virtualbox-iso: Transaction Summary
+    virtualbox-iso: ================================================================================
+    virtualbox-iso: Install  1 Package (+21 Dependent packages)
+    virtualbox-iso:
+    virtualbox-iso: Total download size: 22 M
+    virtualbox-iso: Installed size: 124 M
+    virtualbox-iso: Downloading packages:
+==> virtualbox-iso: warning: /var/cache/yum/x86_64/7/epel/packages/ansible-2.9.6-1.el7.noarch.rpm: Header V3 RSA/SHA256 Signature, key ID 352c64e5: NOKEY
+    virtualbox-iso: Public key for ansible-2.9.6-1.el7.noarch.rpm is not installed
+    virtualbox-iso: --------------------------------------------------------------------------------
+    virtualbox-iso: Total                                               11 MB/s |  22 MB  00:02
+    virtualbox-iso: Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
+==> virtualbox-iso: Importing GPG key 0x352C64E5:
+==> virtualbox-iso:  Userid     : "Fedora EPEL (7) <epel@fedoraproject.org>"
+==> virtualbox-iso:  Fingerprint: 91e9 7d7c 4a5e 96f1 7f3e 888f 6a2f aea2 352c 64e5
+==> virtualbox-iso:  Package    : epel-release-7-11.noarch (@extras)
+==> virtualbox-iso:  From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
+    virtualbox-iso: Running transaction check
+    virtualbox-iso: Running transaction test
+    virtualbox-iso: Transaction test succeeded
+    virtualbox-iso: Running transaction
+    virtualbox-iso:   Installing : python2-pyasn1-0.1.9-7.el7.noarch                           1/22
+    virtualbox-iso:   Installing : python-ipaddress-1.0.16-2.el7.noarch                        2/22
+    virtualbox-iso:   Installing : python-six-1.9.0-2.el7.noarch                               3/22
+    virtualbox-iso:   Installing : python-httplib2-0.9.2-1.el7.noarch                          4/22
+    virtualbox-iso:   Installing : sshpass-1.06-2.el7.x86_64                                   5/22
+    virtualbox-iso:   Installing : libyaml-0.1.4-11.el7_0.x86_64                               6/22
+    virtualbox-iso:   Installing : PyYAML-3.10-11.el7.x86_64                                   7/22
+    virtualbox-iso:   Installing : python-backports-1.0-8.el7.x86_64                           8/22
+    virtualbox-iso:   Installing : python-backports-ssl_match_hostname-3.5.0.1-1.el7.noarch    9/22
+    virtualbox-iso:   Installing : python-setuptools-0.9.8-7.el7.noarch                       10/22
+    virtualbox-iso:   Installing : python-babel-0.9.6-8.el7.noarch                            11/22
+    virtualbox-iso:   Installing : python-ply-3.4-11.el7.noarch                               12/22
+    virtualbox-iso:   Installing : python-pycparser-2.14-1.el7.noarch                         13/22
+    virtualbox-iso:   Installing : python-cffi-1.6.0-5.el7.x86_64                             14/22
+    virtualbox-iso:   Installing : python-markupsafe-0.11-10.el7.x86_64                       15/22
+    virtualbox-iso:   Installing : python-jinja2-2.7.2-4.el7.noarch                           16/22
+    virtualbox-iso:   Installing : python-idna-2.4-1.el7.noarch                               17/22
+    virtualbox-iso:   Installing : python-enum34-1.0.4-1.el7.noarch                           18/22
+    virtualbox-iso:   Installing : python2-cryptography-1.7.2-2.el7.x86_64                    19/22
+    virtualbox-iso:   Installing : python-paramiko-2.1.1-9.el7.noarch                         20/22
+    virtualbox-iso:   Installing : python2-jmespath-0.9.0-3.el7.noarch                        21/22
+    virtualbox-iso:   Installing : ansible-2.9.6-1.el7.noarch                                 22/22
+    virtualbox-iso:   Verifying  : ansible-2.9.6-1.el7.noarch                                  1/22
+    virtualbox-iso:   Verifying  : python-backports-ssl_match_hostname-3.5.0.1-1.el7.noarch    2/22
+    virtualbox-iso:   Verifying  : python2-jmespath-0.9.0-3.el7.noarch                         3/22
+    virtualbox-iso:   Verifying  : python-enum34-1.0.4-1.el7.noarch                            4/22
+    virtualbox-iso:   Verifying  : python-setuptools-0.9.8-7.el7.noarch                        5/22
+    virtualbox-iso:   Verifying  : python-jinja2-2.7.2-4.el7.noarch                            6/22
+    virtualbox-iso:   Verifying  : python-six-1.9.0-2.el7.noarch                               7/22
+    virtualbox-iso:   Verifying  : python-idna-2.4-1.el7.noarch                                8/22
+    virtualbox-iso:   Verifying  : python-markupsafe-0.11-10.el7.x86_64                        9/22
+    virtualbox-iso:   Verifying  : python-ply-3.4-11.el7.noarch                               10/22
+    virtualbox-iso:   Verifying  : python-paramiko-2.1.1-9.el7.noarch                         11/22
+    virtualbox-iso:   Verifying  : python-babel-0.9.6-8.el7.noarch                            12/22
+    virtualbox-iso:   Verifying  : python-backports-1.0-8.el7.x86_64                          13/22
+    virtualbox-iso:   Verifying  : python-cffi-1.6.0-5.el7.x86_64                             14/22
+    virtualbox-iso:   Verifying  : python-pycparser-2.14-1.el7.noarch                         15/22
+    virtualbox-iso:   Verifying  : libyaml-0.1.4-11.el7_0.x86_64                              16/22
+    virtualbox-iso:   Verifying  : python-ipaddress-1.0.16-2.el7.noarch                       17/22
+    virtualbox-iso:   Verifying  : sshpass-1.06-2.el7.x86_64                                  18/22
+    virtualbox-iso:   Verifying  : python-httplib2-0.9.2-1.el7.noarch                         19/22
+    virtualbox-iso:   Verifying  : python2-pyasn1-0.1.9-7.el7.noarch                          20/22
+    virtualbox-iso:   Verifying  : PyYAML-3.10-11.el7.x86_64                                  21/22
+    virtualbox-iso:   Verifying  : python2-cryptography-1.7.2-2.el7.x86_64                    22/22
+    virtualbox-iso:
+    virtualbox-iso: Installed:
+    virtualbox-iso:   ansible.noarch 0:2.9.6-1.el7
+    virtualbox-iso:
+    virtualbox-iso: Dependency Installed:
+    virtualbox-iso:   PyYAML.x86_64 0:3.10-11.el7
+    virtualbox-iso:   libyaml.x86_64 0:0.1.4-11.el7_0
+    virtualbox-iso:   python-babel.noarch 0:0.9.6-8.el7
+    virtualbox-iso:   python-backports.x86_64 0:1.0-8.el7
+    virtualbox-iso:   python-backports-ssl_match_hostname.noarch 0:3.5.0.1-1.el7
+    virtualbox-iso:   python-cffi.x86_64 0:1.6.0-5.el7
+    virtualbox-iso:   python-enum34.noarch 0:1.0.4-1.el7
+    virtualbox-iso:   python-httplib2.noarch 0:0.9.2-1.el7
+    virtualbox-iso:   python-idna.noarch 0:2.4-1.el7
+    virtualbox-iso:   python-ipaddress.noarch 0:1.0.16-2.el7
+    virtualbox-iso:   python-jinja2.noarch 0:2.7.2-4.el7
+    virtualbox-iso:   python-markupsafe.x86_64 0:0.11-10.el7
+    virtualbox-iso:   python-paramiko.noarch 0:2.1.1-9.el7
+    virtualbox-iso:   python-ply.noarch 0:3.4-11.el7
+    virtualbox-iso:   python-pycparser.noarch 0:2.14-1.el7
+    virtualbox-iso:   python-setuptools.noarch 0:0.9.8-7.el7
+    virtualbox-iso:   python-six.noarch 0:1.9.0-2.el7
+    virtualbox-iso:   python2-cryptography.x86_64 0:1.7.2-2.el7
+    virtualbox-iso:   python2-jmespath.noarch 0:0.9.0-3.el7
+    virtualbox-iso:   python2-pyasn1.noarch 0:0.1.9-7.el7
+    virtualbox-iso:   sshpass.x86_64 0:1.06-2.el7
+    virtualbox-iso:
+    virtualbox-iso: Complete!
+==> virtualbox-iso: Uploading /Users/marta/Projects/PackerExample/ansible.yml => /home/centos/ansible.yml
+ansible.yml 835 B / 835 B [===========================================================================================] 100.00% 0s
+==> virtualbox-iso: Provisioning with Ansible...
+    virtualbox-iso: Creating Ansible staging directory...
+    virtualbox-iso: Creating directory: /tmp/packer-provisioner-ansible-local/5e7853d2-a32a-575d-f474-1a69833f9cbc
+    virtualbox-iso: Uploading main Playbook file...
+    virtualbox-iso: Uploading inventory file...
+    virtualbox-iso: Executing Ansible: cd /tmp/packer-provisioner-ansible-local/5e7853d2-a32a-575d-f474-1a69833f9cbc && ANSIBLE_FORCE_COLOR=1 PYTHONUNBUFFERED=1 ansible-playbook /tmp/packer-provisioner-ansible-local/5e7853d2-a32a-575d-f474-1a69833f9cbc/ansible.yml --extra-vars "packer_build_name=virtualbox-iso packer_builder_type=virtualbox-iso packer_http_addr=10.0.2.2:8701 -o IdentitiesOnly=yes"  -c local -i /tmp/packer-provisioner-ansible-local/5e7853d2-a32a-575d-f474-1a69833f9cbc/packer-provisioner-ansible-local964621150
+==> virtualbox-iso: ERROR! conflicting action statements: src, group
+==> virtualbox-iso: 
+==> virtualbox-iso: The error appears to be in '/tmp/packer-provisioner-ansible-local/5e7853d2-a32a-575d-f474-1a69833f9cbc/ansible.yml': line 17, column 7, but may
+==> virtualbox-iso: be elsewhere in the file depending on the exact syntax problem.
+==> virtualbox-iso: 
+==> virtualbox-iso: The offending line appears to be:
+==> virtualbox-iso: 
+==> virtualbox-iso: 
+==> virtualbox-iso:     - name: Copy nginx.conf
+==> virtualbox-iso:       ^ here
+==> virtualbox-iso: 
+==> virtualbox-iso: Provisioning step had errors: Running the cleanup provisioner, if present...
+==> virtualbox-iso: Deregistering and deleting VM...
+==> virtualbox-iso: Deleting output directory...
+Build 'virtualbox-iso' errored: Error executing Ansible: Non-zero exit status: 4
+
+==> Some builds didn't complete successfully and had errors:
+--> virtualbox-iso: Error executing Ansible: Non-zero exit status: 4
+
+==> Builds finished but no artifacts were created.
+kontuzja-mac:PackerExample marta$
